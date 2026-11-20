@@ -1,4 +1,5 @@
 # Fabless Intership Project
+## Description
 
 TOPST(D3-G, VCP-G, AI-G) 플랫폼을 기반으로 차량용 SoC 개발 환경을 구성하고, FreeRTOS를 적용하여 동작을 검증합니다.
 
@@ -12,4 +13,3 @@ TOPST(D3-G, VCP-G, AI-G) 플랫폼을 기반으로 차량용 SoC 개발 환경�
 ## Term
 ### 2026.11.16 - 2026.12.23
 
-## Description
