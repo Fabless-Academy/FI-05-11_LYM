@@ -1,5 +1,4 @@
 # Fabless Intership Project
-## Description
 
 TOPST(D3-G, VCP-G, AI-G) 플랫폼을 기반으로 차량용 SoC 개발 환경을 구성하고, FreeRTOS를 적용하여 동작을 검증합니다.
 
@@ -9,7 +8,7 @@ TOPST(D3-G, VCP-G, AI-G) 플랫폼을 기반으로 차량용 SoC 개발 환경�
 - Git / GitHub을 활용한 환경 세팅 및 실습 기록 관리
 
 ## Location
-### PixelPlus Tower
+경기도 성남시 수정구 금토로 40번길 30
 ## Term
-### 2026.11.16 - 2026.12.23
+2026.11.16 - 2026.12.23
 
