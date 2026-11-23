@@ -20,7 +20,8 @@ TOPST(D3-G, VCP-G, AI-G) 플랫폼을 기반으로 차량용 SoC 개발 환경�
   <summary><b> 클릭하여 상세 실행 결과 보기</b></summary>
   <br>
   가변 저항 범위 [0~4095Ω]
-  <img width="1917" height="1027" alt="ADC_Pot" src="https://github.com/user-attachments/assets/24950550-04da-46a5-91ca-10496322da7c" />
+  <img width="799" height="631" alt="ADC_Pot - Mobaxterm" src="https://github.com/user-attachments/assets/adc704fc-bba8-415b-9a26-f7f95b4dfdc6" />
+
 
 
 
