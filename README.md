@@ -13,3 +13,14 @@ TOPST(D3-G, VCP-G, AI-G) 플랫폼을 기반으로 차량용 SoC 개발 환경�
 ## Term
 2026.11.16 - 2026.12.23
 
+##상세 내역
+<details>
+  <summary><b>▶ 클릭하여 상세 실행 결과 보기</b></summary>
+  <br>
+
+  <img src="C:\Users\Admin\Desktop\picture" width="400" alt="Mobaxterm 출력화면"/>
+
+  ```python
+  print("펼쳐졌을 때 보이는 코드 블록")
+  ```
+</details>
