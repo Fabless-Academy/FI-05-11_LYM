@@ -9,6 +9,8 @@ TOPST(D3-G, VCP-G, AI-G) 플랫폼을 기반으로 차량용 SoC 개발 환경�
 
 ## Location
 ### PIXELPLUS
+<img width="1463" height="941" alt="PixelPlus_Location" src="https://github.com/user-attachments/assets/26618352-f7bb-4c97-b2e3-afb5208f68e4" />
+
 경기도 성남시 수정구 금토로 40번길 30
 ## Term
 2026.11.16 - 2026.12.23
