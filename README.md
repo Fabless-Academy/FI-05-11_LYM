@@ -23,6 +23,30 @@ TOPST(D3-G, VCP-G, AI-G) 플랫폼을 기반으로 차량용 SoC 개발 환경�
   <img src="C:\Users\Admin\Desktop\picture\ADC_Pot" width="400" alt="Mobaxterm 출력화면"/>
 
   ```python
-  print("펼쳐졌을 때 보이는 코드 블록")
+  #include <adc.h>
+#include <stdint.h>
+#include "pot.h"
+
+#define ADC_TYPE        0
+#define ADC_MODULE      0 // 사용할 ADC Module 번호
+#define ADC_CHANNEL     ADC_CHANNEL_3 // 측정할 채널
+
+void Potentiometer_Run(void)
+{
+    uint32_t adc_val = 0; // ADC 변환 결과(12bit data)를 저장할 변수
+
+    ADC_Init(ADC_TYPE, ADC_MODULE); // ADC 초기화
+
+    while (1)
+    {
+        adc_val = ADC_Read(ADC_CHANNEL, ADC_MODULE, 0); // ADC 값 읽기
+        adc_val &= 0xFFF; // 상위 상태 비트 제거 -> 하위 12bit(실제 ADC 값)만 추출
+
+        mcu_printf("[ADC] CH%d = %4d\n", ADC_CHANNEL, adc_val); // 결과를 UART 콘솔로 출력
+
+        SAL_TaskSleep(100);
+    }
+}
+
   ```
 </details>
