@@ -59,3 +59,8 @@ void Potentiometer_Run(void)
 
   ```
 </details>
+
+<details>
+  <summary><b> Zonal Architecture 콘셉트 기반 D3-G ↔ VCP-G CAN 통신을 통한 주행·조향 제어 시스템</b></summary>
+  <br>
+  
