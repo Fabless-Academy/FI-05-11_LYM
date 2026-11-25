@@ -9,17 +9,6 @@ TOPST(D3-G, VCP-G, AI-G) 플랫폼을 기반으로 차량용 SoC 개발 환경�
 - 크로스 컴파일 툴체인 및 `FreeRTOS-VCP` 프로젝트 구성
 - Git / GitHub을 활용한 환경 세팅 및 실습 기록 관리
 
-## Location
-### PIXELPLUS
-<img width="1463" height="941" alt="PixelPlus_Location" src="https://github.com/user-attachments/assets/26618352-f7bb-4c97-b2e3-afb5208f68e4" />
-
-경기도 성남시 수정구 금토로 40번길 30
-## Term
-2026.11.16 - 2026.12.23
-
-## 상세 내역
-
-
 <details>
   <summary><b> 가변저항에 따른 ADC 출력 변화</b></summary>
   <br>
@@ -87,3 +76,15 @@ void Potentiometer_Run(void)
 
 
 </details>
+
+
+## Location
+### PIXELPLUS
+
+
+경기도 성남시 수정구 금토로 40번길 30
+## Term
+2026.11.16 - 2026.12.23
+
+
+
