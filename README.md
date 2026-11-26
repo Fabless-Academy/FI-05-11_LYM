@@ -9,44 +9,29 @@ TOPST(D3-G, VCP-G, AI-G) 플랫폼을 기반으로 차량용 SoC 개발 환경�
 - 크로스 컴파일 툴체인 및 `FreeRTOS-VCP` 프로젝트 구성
 - Git / GitHub을 활용한 환경 세팅 및 실습 기록 관리
 
+
 <details>
-  <summary><b> 가변저항에 따른 ADC 출력 변화</b></summary>
+  <summary><b>I2C / SPI / PDM 주변장치 제어 (1602 LCD, MAX7219 도트 매트릭스, B10K 가변저항)</b></summary>
   <br>
-  가변 저항 범위 [0~4095Ω]
 
-  
-  <img width="799" height="631" alt="ADC_Pot - Mobaxterm" src="https://github.com/user-attachments/assets/adc704fc-bba8-415b-9a26-f7f95b4dfdc6" />
+- **개발 환경**: Telechips TOPST (TCC70xx / VCP), C, MobaXterm
+- **통신 및 제어 인터페이스**: I2C, SPI, GPIO
+
+#### 1. 시스템 개요
+- 임베디드 버스 프로토콜(I2C, SPI)을 활용해 외부 디스플레이 및 매트릭스 출력 모듈을 제어하는 기초 드라이버/애플리케이션 동작을 구현했습니다.
+
+#### 2. 구현 내용
+| 구성 요소 | 역할 및 구현 사항 |
+| :--- | :--- |
+| **I2C 1602 LCD 제어** | 루프 카운트 출력 및 일정 주기(3초) 화면 전환 로직 구현 |
+| **SPI MAX7219 도트 매트릭스** | 도트 매트릭스 출력 제어 코드 및 주석 정리 |
+| **PDM B10K 가변저항** | 출력 조정 및 기록 |
+
+가변저항 범위: 0~4095[Ω]
+<img width="1917" height="1027" alt="ADC_Pot" src="https://github.com/user-attachments/assets/d8b5d5ae-3028-434f-a28f-d013d188bc4e" />
 
 
 
-
-  ```python
-  #include <adc.h>
-#include <stdint.h>
-#include "pot.h"
-
-#define ADC_TYPE        0
-#define ADC_MODULE      0 // 사용할 ADC Module 번호
-#define ADC_CHANNEL     ADC_CHANNEL_3 // 측정할 채널
-
-void Potentiometer_Run(void)
-{
-    uint32_t adc_val = 0; // ADC 변환 결과(12bit data)를 저장할 변수
-
-    ADC_Init(ADC_TYPE, ADC_MODULE); // ADC 초기화
-
-    while (1)
-    {
-        adc_val = ADC_Read(ADC_CHANNEL, ADC_MODULE, 0); // ADC 값 읽기
-        adc_val &= 0xFFF; // 상위 상태 비트 제거 -> 하위 12bit(실제 ADC 값)만 추출
-
-        mcu_printf("[ADC] CH%d = %4d\n", ADC_CHANNEL, adc_val); // 결과를 UART 콘솔로 출력
-
-        SAL_TaskSleep(100);
-    }
-}
-
-  ```
 </details>
 
 <details>
