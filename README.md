@@ -74,6 +74,16 @@ TOPST(D3-G, VCP-G, AI-G) 플랫폼을 기반으로 차량용 SoC 개발 환경�
 - **Dying ReLU 방지**: 단일 필터(`filters=1`) 구조에서는 초기 가중치가 음수로 밀릴 경우 전체 활성값이 `0`이 되어 기울기 전파가 중단됨을 확인
 - **정확도 확보 조건**: 다중 채널(`filters ≥ 4~16`)을 통한 특징 분리, 입력 데이터 정규화(`0~1` 스케일링), 라벨 형태에 맞는 손실 함수(`sparse_categorical_crossentropy`) 매칭이 필수적임
 
+## 손글씨 기본 데이터
+<img width="1448" height="650" alt="image" src="https://github.com/user-attachments/assets/d165ace9-18fc-4904-94fe-c2297cab9575" />
+
+## 결과
+<img width="1448" height="650" alt="image" src="https://github.com/user-attachments/assets/6191d68e-b306-4b32-b7ba-66e2f5fc0017" />
+
+## 훈련 정확도
+<img width="1010" height="470" alt="image" src="https://github.com/user-attachments/assets/6f9bf77d-6f01-4f38-a16e-9030ad49bf80" />
+
+
 </details>
 
 ## Location
