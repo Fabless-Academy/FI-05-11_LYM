@@ -72,7 +72,7 @@ void Potentiometer_Run(void)
 
 
 
-<details>
+  <details>
   <summary><b>CNN 경량화 및 정확도 튜닝 (MNIST)</b></summary>
   <br>
 
