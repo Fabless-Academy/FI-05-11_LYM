@@ -72,7 +72,7 @@ void Potentiometer_Run(void)
 
 
 
-  <details>
+<details>
   <summary><b>CNN 경량화 및 정확도 튜닝 (MNIST)</b></summary>
   <br>
 
@@ -93,7 +93,7 @@ void Potentiometer_Run(void)
 - **Dying ReLU 방지**: 단일 필터(`filters=1`) 구조에서는 초기 가중치가 음수로 밀릴 경우 전체 활성값이 `0`이 되어 기울기 전파가 중단됨을 확인
 - **정확도 확보 조건**: 다중 채널(`filters ≥ 4~16`)을 통한 특징 분리, 입력 데이터 정규화(`0~1` 스케일링), 라벨 형태에 맞는 손실 함수(`sparse_categorical_crossentropy`) 매칭이 필수적임
 
-</details>
+  </details>
 
 ## Location
 ### PIXELPLUS
