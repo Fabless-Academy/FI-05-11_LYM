@@ -50,25 +50,21 @@ void Potentiometer_Run(void)
 </details>
 
 <details>
-  <summary><b> Zonal Architecture 기반 D3-G ↔ VCP-G CAN 통신을 통한 주행·조향 제어 시스템</b></summary>
+  <summary><b>Zonal Architecture 기반 D3-G ↔ VCP-G CAN 통신 및 구동·조향 제어</b></summary>
   <br>
-  
-  
-  Blue Light == Brake Pin
 
+- **개발 환경**: Telechips TOPST (D3-G / VCP-G, TCC70xx MCU BSP V1.0.0), FreeRTOS, C / Python, Qt
+- **통신 및 제어 인터페이스**: CAN (Transceiver 연동), PDM/PWM, GPIO, UART (MobaXterm)
 
-  Green Light == Left Pin
+#### 1. 시스템 개요
+- 상위 제어기(D3-G)에서 CAN 버스로 주행·조향 제어 명령을 송신하고, 하위 존 제어기(VCP-G)가 FreeRTOS 태스크 및 메시지 큐(`xQ_MotorSpeed`, `xQ_MotorWheel`)를 통해 DC 모터와 서보 모터를 실시간 제어하는 프로토타입을 구현했습니다.
 
-  
-  Yellow Light == Right Pin
-
-  
-  Red Light == Head Light Pin
-
-
-
-
-  조향기능은 공간이 협소하여 생략
+#### 2. 구현 내용
+| 구성 요소 | 역할 및 구현 사항 |
+| :--- | :--- |
+| **CAN 송수신 연동** | D3-G 측 `IPC_Example.py` 스크립트로 CAN 프레임 송신 및 트랜시버 경유 VCP-G 연동 구성 |
+| **구동 모터 제어** | `MotorSpeedTask`, `ESC_SetAngle256`, `MotorA_Set` / `MotorB_Set` 기반 속도·듀티 및 방향 제어 |
+| **조향 서보 제어** | `MotorWheelTask`, `ConfigureServoPWM` 기반 입력값 매핑 및 50Hz(20ms) PWM 펄스 출력 |
 
 </details>
 
