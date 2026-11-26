@@ -58,7 +58,7 @@ TOPST(D3-G, VCP-G, AI-G) 플랫폼을 기반으로 차량용 SoC 개발 환경�
   <br>
 
 - **실습 환경**: Google Colab / TensorFlow (Keras)
-- **실습 자료**: [Colab 환경에서 CNN MNIST 실습 노트북](https://drive.google.com/file/d/1Pohbtm0vZiJonpCf-VilCamU6s-Fud5W/view?usp=sharing)
+- **실습 자료**: [Colab 환경에서 CNN MNIST 실습 노트북]([https://drive.google.com/file/d/1Pohbtm0vZiJonpCf-VilCamU6s-Fud5W/view?usp=sharing](https://drive.google.com/file/d/1Pohbtm0vZiJonpCf-VilCamU6s-Fud5W/view?usp=sharing))
 
 #### 1. 실험 개요
 - 기본 3단 `Conv2D + MaxPool2D` 구조에서 모델 경량화(파라미터 수 최소화)를 시도하고, 극단적 축소 시 발생하는 학습 저하 원인을 분석하여 적정 균형점을 도출했습니다.
