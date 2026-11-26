@@ -70,7 +70,7 @@ void Potentiometer_Run(void)
 
   조향기능은 공간이 협소하여 생략
 
-
+</details>
 
 <details>
   <summary><b>CNN 경량화 및 정확도 튜닝 (MNIST)</b></summary>
