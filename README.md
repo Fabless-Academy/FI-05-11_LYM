@@ -15,7 +15,7 @@ TOPST(D3-G, VCP-G, AI-G) 플랫폼을 기반으로 차량용 SoC 개발 환경�
   <br>
 
 - **개발 환경**: Telechips TOPST (TCC70xx / VCP), C, MobaXterm
-- **통신 및 제어 인터페이스**: I2C, SPI, GPIO
+- **통신 및 제어 인터페이스**: I2C, SPI, PDM, GPIO
 
 #### 1. 시스템 개요
 - 임베디드 버스 프로토콜(I2C, SPI)을 활용해 외부 디스플레이 및 매트릭스 출력 모듈을 제어하는 기초 드라이버/애플리케이션 동작을 구현했습니다.
