@@ -107,11 +107,14 @@ TOPST(D3-G, VCP-G, AI-G) 플랫폼을 기반으로 차량용 SoC 개발 환경�
 <img width="1400" height="1050" alt="KakaoTalk_20261127_144701985" src="https://github.com/user-attachments/assets/0e385cdd-c47b-46bc-9b67-552d46e88ec0" />
 
 #### 3. 실행 파이프라인 요약
-```bash
-# 1. NPU 병렬 추론 서버 실행 (YOLOv8s + LaneAF)
-./topst-nn-server -N yolov8s_quantized/ -N laneAF_quantized/ -i tcp
 
-# 2. 브리지 앱 실행 (영상 스트리밍 및 100ms 주기 CAN 출력 활성화)
+NPU 병렬 추론 서버 실행 (YOLOv8s + LaneAF)
+```bash
+./topst-nn-server -N yolov8s_quantized/ -N laneAF_quantized/ -i tcp
+```
+
+브리지 앱 실행 (영상 스트리밍 및 100ms 주기 CAN 출력 활성화)
+```bash
 sudo zonal python3 zonal_app.py --video splite_out/test_02.mp4 --can-enable --can-period-ms 100
 ```
 </details>
