@@ -91,6 +91,8 @@ TOPST(D3-G, VCP-G, AI-G) 플랫폼을 기반으로 차량용 SoC 개발 환경�
   <summary><b>NPU 다중 모델 병렬 추론 및 CAN-대시보드 통합 연동</b></summary>
   <br>
 
+- **개발 환경**: Telechips TOPST (D3-G / AI-G, Zonal Application Tool kit), C / Python, Qt
+
 #### 1. 구현 목표
 - NPU 추론 서버, AP 브리지 애플리케이션, CAN 통신, Qt 기반 클러스터 대시보드를 연결하여 실시간 AI 인지 결과가 차량 통신 및 HMI까지 전달되는 통합 파이프라인 구축
 
