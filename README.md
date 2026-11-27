@@ -88,9 +88,34 @@ TOPST(D3-G, VCP-G, AI-G) 플랫폼을 기반으로 차량용 SoC 개발 환경�
 </details>
 
 <details>
-  <summary><b>YOLOv8 Model Convert</b></summary>
+  <summary><b>NPU 다중 모델 병렬 추론 및 CAN-대시보드 통합 연동</b></summary>
   <br>
+
+#### 1. 구현 목표
+- NPU 추론 서버, AP 브리지 애플리케이션, CAN 통신, Qt 기반 클러스터 대시보드를 연결하여 실시간 AI 인지 결과가 차량 통신 및 HMI까지 전달되는 통합 파이프라인 구축
+
+#### 2. 주요 수행 내용
+- **Qt 대시보드 빌드 및 시나리오 설정 (`TOPST_DashBoard`)**
+  - `qmake` 및 `make`로 대시보드 애플리케이션을 빌드·실행하고 `Scenario > Selection`으로 주행 시나리오 구성
+- **NPU 다중 모델 병렬 추론 서버 구동 (`topst-nn-server`)**
+  - TCP 프레임 입력 모드(`-i tcp`)로 `yolov8s_quantized`(객체 검출)와 `laneAF_quantized`(차선 인식) 두 모델을 동시에 추론하도록 설정
+- **브리지 앱 연동 및 주기적 CAN 송신 (`Bridge_App/zonal_app.py`)**
+  - 주행 영상 데이터(`test_01.mp4`, `test_02.mp4`)를 추론 서버로 스트리밍하고, 추론 결과를 받아 100ms 주기의 CAN 메시지(`--can-enable --can-period-ms 100`)로 송출 및 대시보드 시각화 연동
+
+<img width="1400" height="1050" alt="KakaoTalk_20261127_144701985" src="https://github.com/user-attachments/assets/0e385cdd-c47b-46bc-9b67-552d46e88ec0" />
+
 </details>
+
+#### 3. 실행 파이프라인 요약
+```bash
+# 1. NPU 병렬 추론 서버 실행 (YOLOv8s + LaneAF)
+./topst-nn-server -N yolov8s_quantized/ -N laneAF_quantized/ -i tcp
+
+# 2. 브리지 앱 실행 (영상 스트리밍 및 100ms 주기 CAN 출력 활성화)
+sudo zonal python3 zonal_app.py --video splite_out/test_02.mp4 --can-enable --can-period-ms 100
+
+# 3. Qt 대시보드 빌드 및 실행
+qmake && make && ./TOPST_DashBoard
 
 ## Location
 ### PIXELPLUS
