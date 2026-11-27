@@ -2,9 +2,9 @@
 
 TOPST(D3-G, VCP-G, AI-G) 플랫폼을 기반으로 차량용 SoC 개발 환경을 구성하고, FreeRTOS를 적용하여 동작을 검증합니다.
 
-[개인 이력서](https://github.com/REDNeOnSpade/-)
+**[개인 이력서](https://github.com/REDNeOnSpade/-)**
 
-[기획 및 추진 프로젝트](https://github.com/Fabless-Academy/FI-05-11_LYM-TC-PRJ-CORE)
+**[기획 및 추진 프로젝트](https://github.com/Fabless-Academy/FI-05-11_LYM-TC-PRJ-CORE)**
 
 ## 활동 내역
 - WSL2 및 Ubuntu 기반 Linux 개발 환경 세팅
